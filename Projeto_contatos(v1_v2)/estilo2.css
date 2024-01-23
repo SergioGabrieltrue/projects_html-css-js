@@ -28,6 +28,7 @@ body {
     gap:16px;
     list-style-type:none;
 }
+/* Faz com que list seja a flex box central do programa. */
 
 .list-item{
     flex-basis:280px;
@@ -41,6 +42,8 @@ body {
 
 
 }
+
+/*Editando o flex-item e a sua imagem*/
 
 .divlist-item-imagem img{
     border-radius:50%;
