@@ -1,19 +1,21 @@
 html, body{
     height:100%
 }
+/* Para definir o height do body em percentual, é necessário definir height ao html (elemento pai). */
 
 body {
     background-color: aqua;
     margin: 0;
     padding: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    
     display:flex;
     justify-content:center;
     align-items:center;
     flex-direction:column;
 
 }
+
+/* Usando o body como elemento de flex model principal.*/
 
 .main-title {
     color: #385555;
@@ -30,11 +32,14 @@ body {
 
 }
 
+/* Estabelecendo um contâiner para as <li>*/
+
 .list{
     list-style:none;
     padding:0;
     margin:0;
 }
+
 .list-item{
     display:flex;
     border-bottom:1px solid #eee;
@@ -47,15 +52,19 @@ body {
     border-radius: 50%;
 }
 
+/*Circunferência perfeita para imagem, usando o border-radius na metade de seu enchimento.*/
+
 .list-item__content{
     padding: 0 20px;
     flex-grow:1;
 }
 
+/*Flex-grow para não causar quebra de linha e colocar todo espaço que sobra em sua largura.*/
+
 .list-item__name{
     font-size:24px;
     color: #385555;
-    margin:0;
+    margin:0px;
 }
 
 .list-item__e-mail{
@@ -68,6 +77,8 @@ body {
     background-color: #e8e8e8;
 }
 
+/*Aplicando a sub-classe :hover para revelar os ícones ao passar do cursor*/
+
 .list-item__actions{
     display:flex;
     gap: 16px;
@@ -75,6 +86,9 @@ body {
     opacity:0;
 } 
 
+/*Opacity 0 para deixar os ícones opacos, e quando o usuário passar o cursor no list-item, os elementos ficaram transparentes.*/
+
 .list-item:hover .list-item__actions{
     opacity:0.3;
 }
+
