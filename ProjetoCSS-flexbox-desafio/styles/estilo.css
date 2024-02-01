@@ -1,0 +1,77 @@
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image:url(../imagens/bg-2.jpg);
+    background-position:center;
+    background-size:100%;
+    background-repeat:no-repeat;
+
+}
+
+/* Colocando imagem de fundo. */
+
+.cabecalho{
+    text-align:center;
+    padding:1px;
+    width:80%;
+    margin: 50px auto 0;
+}
+
+.cabecalho__title{
+    color:white;
+    text-shadow: 2px 2px 2px black;
+    font-size:46px;
+    text-transform: uppercase;
+    margin:0;
+
+}
+
+.cabecalho__text{
+    background-color:rgba(0,0,0, 0.5);
+    color:white;
+    padding:15px;
+    display:inline-block;
+    border-bottom:2px solid white
+
+}
+
+/*Display inline-block para a box do conteúdo ocupar apenas ele mesmo.*/
+
+.mainbox{
+    display:flex;
+    flex-wrap:wrap;
+    width:860px;
+    margin:10px auto;
+    padding:10px;
+    gap:16px;
+    background-color: white;
+}
+
+/* Ajustando a box, ordenando espaçamento e wrap para quebrar a linha. */
+
+.card{
+    flex-basis:210px;
+    flex-grow:1;
+}
+
+/* Enchendo todo o conteúdo de sobra e definindo sua flex-basis */
+.card img{
+    width:100%;
+    display:block
+}
+
+/* Como a imagem já tem largura definida, para que o flex-basis tenha o mesmo tamanho que a imagem, preenchendo toda ela, usa-se o width:100%. */
+
+.card p{
+    margin:0;
+    background-color:#393535;
+    color:white;
+    padding:6px;
+    font-weight:bold;
+
+}
