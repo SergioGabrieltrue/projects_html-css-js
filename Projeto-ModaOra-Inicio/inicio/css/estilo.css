@@ -1,0 +1,164 @@
+
+
+:root{
+    --title-size: 2rem;
+}
+
+/* Declaração variável no CSS */
+
+body{
+    margin:0;
+    padding:0;
+    font-family: Roboto, Courier, monospace;
+    color: #555;
+}
+
+/*Definindo a fonte padrão da página, Roboto */
+
+#principal {
+    width: 64em;
+    margin: 1.25em auto;
+}
+
+/* Além de centralizar todo o conteúdo, adiciona uma margin na vertical. */
+
+@font-face {
+    font-family: 'GFS Didot';
+    src: url(../fonts/GFS_Didot/GFSDidot-Regular.ttf) format(truetype);
+}
+
+/* Inserção das duas fontes usadas no programa */
+
+@font-face {
+
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto/Roboto-Regular.ttf) format(truetype);
+}
+
+
+.cabecalho{
+    display:flex;
+    background-color: #162028;
+    align-items:center;
+    justify-content:space-between;
+
+}
+
+/* Separando os flex-itens para ficar espaçados de um ao outro */
+
+.cabecalho__logo{
+    color:white;
+    font-family:GFS Didot, 'Arial Narrow', Arial, sans-serif;
+    font-size: var(--title-size);
+    margin:0.5rem 6rem;
+    
+}
+
+
+.cabecalho__pages ul{
+    display:flex;
+    list-style: none;
+    margin-right:2rem;
+    gap:6rem;
+    letter-spacing: .2rem;
+    text-transform:uppercase;
+    font-size: .8rem;
+    
+}
+
+.cabecalho__pages{
+    display:inline-block;
+}
+.cabecalho__pages a{
+    padding:1rem;
+    text-decoration:none;
+    transition: background-color 0.5s cubic-bezier(0,-0.01,.12,.43);
+    color: #555;
+}
+
+/* Aumento área do link e aplicação de background-color em uma animação. */
+
+.cabecalho__pages a:hover{
+    background-color: white;
+}
+
+
+.mid {
+    width:90ch;
+    margin:auto
+}
+
+/* Usando medida ch para deixar o texto justo e mais confortável de ler. */
+
+.mid__title{
+    text-align: center;
+    margin:5rem 0 2rem;
+    font-family: GFS Didot, Helvetica, sans-serif;
+    font-size:var(--title-size);
+    font-weight:normal;
+}
+
+.mid__text{
+    text-align:center;
+    line-height:2;
+}
+
+/* line-height para uma leitura menos cansativa. */
+
+.mid-box{
+    display:flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+
+.moda{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Flex-direction para endireitar <p> e <h3> da imagem em colunas ao invés de linhas */
+
+.moda h3{
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+
+.moda p{
+    margin:0 0 3rem;
+}
+
+.end{
+    background-image: url(../imagens/bg_detalhe.png);
+    background-repeat: no-repeat;
+    color:white;
+    background-position:right bottom;
+    background-color:#003d52;
+
+}
+
+/* Preenchendo a imagem com um background-color para ela não perder sua qualidade com uma cor compatível */
+
+.end__title{
+    font-family: GFS Didot, Helvetica, sans-serif;
+    padding:8rem 6rem 0rem; 
+    font-size: 3.4rem;
+    font-weight:normal;  
+    text-transform:uppercase;
+}
+
+.end__p{
+    padding:0 6rem 8rem;
+    width:65ch;
+    line-height:1.5;
+    margin-bottom:0;
+}
+
+footer{
+    background-color:#0b171f;
+    color:#6f8597;
+    text-align:center;
+    padding:1.5rem;
+    letter-spacing: .2rem;
+    margin:0;
+}
