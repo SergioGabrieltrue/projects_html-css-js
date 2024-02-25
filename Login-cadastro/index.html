@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Login</title>
+
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <form action="" method="post" class="log">
+         <fieldset class="log_group">
+            <legend class="log_group_title">Login</legend>
+
+            <label for="username" class="log_group_lab">Usuário</label>
+            <input type="text" id="username" name="username" class="log_group_put" autofocus required>
+            <!-- Colocando o autofocus para o usuário pode interagir rapidamente a seu login. -->
+
+            <label for="password" class="log_group_lab">Senha</label>
+            <input type="password" id="password" name="password" class="log_group_put" required>
+            
+            <!-- Dividindo a parte final da flex-box-->
+            <div class="wrap-btn">
+                <div class="login-container">
+                    <input type="submit" value="Login" class="btn-login">
+                    <a href="cadastro.html" class="btn-cadastra">Cadastre-se</a>
+                </div>
+
+                <span><a href="cadastro.html">Esqueci minha senha</a></span>
+            </div>
+           
+        </fieldset>
+    </form>    
+</body>
+</html>
