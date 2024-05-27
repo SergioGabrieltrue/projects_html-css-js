@@ -1,0 +1,299 @@
+:root{
+    --primary-color: hsl(300, 93%, 21%);
+    --secondary-color: #f6f6f6;
+}
+
+/* Estabelecendo variáveis */
+
+html{
+    font-family:sans-serif;
+}
+
+h1, h2, h3, h4{
+    font-family: 'Oxygen', 'sans-serif';
+}
+
+.limiter{
+    max-width: 70.25rem;
+    margin:auto;
+}
+
+/* Limitando a largura do conteúdo para qualquer aparelho */
+
+.angels-header{
+    text-align: center;
+}
+
+.angels-header-nav{
+    list-style-type: none;
+    color:white;
+    background-color: var(--primary-color);
+    padding:0;
+    margin-bottom: 0;
+}
+
+/* Estilização da navegação. */
+
+.angels-header-nav a{
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color:inherit;
+}
+
+.angels-header-nav a:hover{
+    background-color: color-mix(in srgb, var(--primary-color), white 15%);
+}
+
+/* Mistura da cor da variável com branco */
+
+@media screen and (min-width: 48.75rem){
+    .angels-header{
+        display:flex;
+        justify-content:space-between;
+    }
+
+    .angels-header-nav li{
+        display:inline-block;
+    }
+
+    .angels-header-nav{
+        background-color: initial;
+        color:var(--primary-color);
+    }
+
+    .angels-header-nav a:hover{
+        background-color: color-mix(in srgb, var(--primary-color), white 85%);
+    }
+
+}
+
+/* Media Query para todo header, alterando sua estrutura como também aplicando um flex-box para isso. */
+
+.heroAngels{
+    text-align:center;
+    background-color: var(--secondary-color);
+    padding:1em;
+}
+
+.heroAngels-iconPlay{
+    height:5em;
+    width:5em;
+    display:none;
+}
+
+/* Escondendo a imagem até a media query ser aplicada.*/
+.heroBanners-iconPlay img{
+    width:100%;
+}
+
+.heroAngels-title{
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin:1.5em 0;
+}
+
+.heroAngels-subtitle{
+    font-size: 1em;
+    color: color-mix(in srgb, var(--primary-color), white);
+    line-height: 1.5;
+}
+
+.heroAngels-btn{
+    display:inline-block;
+    padding: .9em 2.5em;
+    background-color: #58c4c4;
+    text-decoration:none;
+    border-radius: 5px;
+    color:white;
+}
+
+@media screen and (min-width: 48.75rem){
+    .heroAngels{
+        background-color: var(--primary-color);
+    }
+
+    .heroAngels-title,
+    .heroAngels-subtitle{
+        color:white;
+    }
+
+    .heroAngels-iconPlay{
+        display:inline-block;
+    }
+}
+
+/* Fazendo que o ícone antes escondido aparecesse com esse tamanho de tela. */
+
+@media screen and (min-width: 56.25em){
+    .heroAngels{
+        background-image: url(../images/bg_topo_1198x670.jpg);
+        aspect-ratio: 1198 / 670;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .heroAngels .limiter{
+        margin: initial;
+        margin-bottom: 4em;
+        width: 75%; 
+    }
+
+}
+
+/* Aplicando proporcionalidade na hora de diminuir e aumentar a tela com aspect-ratio. */
+
+
+@media screen and (min-width: 74em){
+    .heroAngels{
+        background-image: linear-gradient(transparent, purple 95%), url(../images/bg_topo_1600x1374.jpg);
+        background-blend-mode: luminosity;
+        background-position: center top;
+        background-color: var(--primary-color);
+        background-repeat: no-repeat;
+        max-height: 80vh;
+        width: 100%;
+    }
+
+    .heroAngels .limiter{
+        width: 50%;
+    }
+
+    .heroAngels-iconPlay{
+        width: 7em;
+        height: 7em;
+    }
+
+    /* No primeiro elemento, além da configuração de cores, há uma reestrição de o quanto que o aspect-ratio pode aumentar o hero banner. Determinado pelo max-height em seu final. */
+}
+
+    .middleContent{
+        background-color: var(--secondary-color);
+        text-align: center;
+        padding: 2em; 
+    }
+
+    .middleContent a{
+        color:inherit;
+        text-decoration:none;
+    }
+
+    .middleContent-title{
+        color:var(--primary-color);
+        text-transform: uppercase;
+        font-size: 1.25em;
+    }
+
+    .middleContent span[class^="icon-"]{
+        color: var(--primary-color);
+        font-size: 3.5em;
+    }
+
+    /*Selecionado todas as classes que começam com "icon-", assim selecionando todos icon do icomoon */
+
+    .middleContent p{
+        line-height: 1.5;
+    }
+
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+        gap:1rem;
+    }
+
+    .col{
+        flex: 1 0 auto;
+        width: 100%;
+    }
+
+    .col-sm-12{
+        width:100%;
+    }
+
+    /* Sistema de 12 grids com 12 em coluna*/
+
+    @media screen and (min-width: 48.75em){
+        .col-md-6{
+            width: calc(50% - 1rem);
+        }
+    } 
+      /* Sistema de 12 grids com 6 em coluna*/
+
+    @media screen and (min-width: 74em){
+        .col-xl-3{
+            width: calc(25% - 1rem)
+        }
+    
+        /* Sistema de 12 grids com 3 em coluna*/
+
+        .col-xl-6{
+            width: calc(50% - 2rem);
+        }
+    }
+
+
+    .mainContent {
+        padding: 2em
+    }
+
+    .mainContent p{
+        line-height: 1.2;
+    }
+
+    .mainContent-img img{
+        width: 100%;
+    }
+
+    .mainContent-title{
+        text-transform: uppercase;
+        color: var(--primary-color);
+        font-weight: normal;
+        letter-spacing: .2em;
+        font-size: 1.25em;
+    }
+
+    .mainContent .row{
+        row-gap: 4em;
+    }
+
+    .mainContent{
+        container: Content-shrink / inline-size;
+    }
+
+    @container Content-shrink (min-width: 37.5em){
+        .mainContent-article{
+            display:flex;
+            gap: 1rem;
+        }
+
+        .mainContent-title{
+            margin-top:0;
+        }
+
+        .mainContent-img img{
+            max-height: 382px;
+        }
+
+        .mainContent-img{
+            flex: 0 0 25%;
+        }
+
+        .mainContent-text{
+            flex:1;
+        }
+
+        /* Essa media query aplicada em container, comprime o contéudo em um determinado tamanho do container (.mainContent) para um altura fixa. O texto ocupa espaço que resta enquanto a imagem não cresce junto.
+        Toda essa experiência deixará uma visão adequada do contéudo para o usuário sem deixar a imagem muito "pixelizada" */
+    }
+
+    
+
+.footerAngels{
+    background-color: #252569;
+    padding: 3em;
+    text-align: center;
+    color:#777676;
+}
+
+   
