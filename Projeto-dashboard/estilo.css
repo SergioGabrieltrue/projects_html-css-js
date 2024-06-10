@@ -1,0 +1,208 @@
+:root{
+    --primary-color: #004EDA;
+    --grey:#F2F2F8;
+    --black: #111;
+    --strong-grey:#5a5a5f;
+    --default-padding: 2rem;
+    --middle-padding: calc(var(--default-padding) / 2);
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: 4em minmax(calc(100vh - 4rem), auto);
+    margin:0;
+}
+
+/* Definição do body como grid container, junto a uma função de calc para permitir que o conteúdo do main seja mostrado com totalidade inicialmente.*/
+
+img{
+    max-width: 100%;
+}
+
+.mainNav{
+    grid-row: 1 / -1;
+    grid-column: 1 / 2;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+    position:sticky;
+    top:0;
+    /* padding-right: var(--default-padding); */
+}
+
+/*Fazendo com a navegação fique estática mesmo com barra de rolagem.*/
+
+
+.topnav{
+    grid-row: 1 / 2;
+    grid-column: 2 / -1;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main{
+    grid-row: 2 / -1;
+    grid-column: 2 / -1;
+    background-color: var(--grey);
+    display:grid;
+    gap: var(--default-padding);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:min-content;
+    padding: var(--default-padding)
+}
+
+main>* {
+    grid-column: span 2;
+}
+
+main>.grid-half{
+    grid-column: span 1;
+}
+
+/*Ajuste de grids por spans*/
+
+main > figure{
+    margin:0;
+}
+
+.mainNav_linkLogo{
+    padding-left: var(--default-padding);
+    padding-top: var(--default-padding);
+    display: inline-block;
+    color: var(--black);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    padding-right: var(--default-padding);
+}
+
+.mainNav_menu, 
+.topnav_menu{
+    list-style-type: none;
+    margin:0;
+    padding: 0;
+    padding-left: var(--default-padding);
+}
+
+.mainNav_menu{
+    padding-right: var(--default-padding);
+}
+
+
+.mainNav_menu a, 
+.topnav_menu a{
+    text-decoration: none;
+    color: var(--strong-grey);
+}
+
+.mainNav_menu svg, 
+.topnav_menu svg{
+    vertical-align: bottom;
+}
+
+/* Alinhamento dos ícones ao texto.*/
+
+.mainNav_menus{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding-top: var(--default-padding)
+}
+
+.mainNav_menu li{
+    margin-bottom: 1rem;
+}
+
+.mainNav_menu:not(:last-child){
+    border-bottom: 2px solid var(--grey);
+    padding-bottom: var(--default-padding);
+}
+
+/* Impedindo que a borda fique no último conteúdo caso adicionado mais menus.*/
+
+.topnav_menu{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.perfil{
+    display:flex;
+    height: 100%;
+    align-items: center;
+    padding-right: var(--default-padding);
+}
+
+.perfil_thumb{
+    height: 100%;
+    padding: .5rem 0;
+    margin-right: var(--middle-padding);
+    box-sizing: border-box;
+}
+
+/* Ajuste da imagem ao tamanho do header em conjunto com arrendodamento.*/
+
+.perfil_thumb img{
+    height: 100%;
+    border-radius: 50%;
+}
+
+.perfil_name{
+    font-weight: 600;
+    font-size: .8rem;
+    color: var(--black)
+}
+
+.perfil_spec{
+    color: color-mix(in srgb, var(--black), transparent 60%);
+    text-transform: uppercase;
+    font-size: .7rem;
+}
+
+.summary{
+    background-color: white;
+    display: flex;
+    padding: 1rem;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.summary article{
+    padding: var(--middle-padding) 0;
+}
+
+.summary_description{
+    color: var(--strong-grey);
+    margin-right: var(--middle-padding);
+}
+
+.summary_number{
+    color:var(--primary-color);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.btn{
+    display:inline-block;
+    color: white;
+    background-color: var(--primary-color);
+    padding: 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight:500;
+}
+
+.summary_separated{
+    width: 1px;
+    background-color: var(--grey);
+    align-self: stretch;
+}
+
+/*Alongamento da linha com algin-self, dando a impressão que esta linha está separando os conteúdo.*/
